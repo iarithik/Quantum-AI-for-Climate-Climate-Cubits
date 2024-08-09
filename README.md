@@ -30,33 +30,33 @@ Ensure your repository is public and submitted by **August 9, 2024, 23:59pm US E
 Ensure your repository does not contain any personal or team tokens/access information to access backends. Ensure your repository does not contain any third-party intellectual property (logos, company names, copied literature, or code). Any resources used must be open source or appropriately referenced.
 
 ### Team Information:
-Team Member 1: _(full name)_
- - Email:
- - Discord ID:
- - GitHub ID:
- - Nationality:
- - Current affiliation:
+Team Member 1: _(Shivani Mayekar)_
+ - Email:shivanidattaram20@gmail.com
+ - Discord ID:meowismew
+ - GitHub ID:ShivaniDM
+ - Nationality:Indian
+ - Current affiliation:Not Applicable
 
-Team Member 2: _(full name)_
- - Email:
- - Discord ID:
- - GitHub ID:
- - Nationality:
- - Current affiliation:
+Team Member 2: _(Harshit Agarwal)_
+ - Email:harshitagarwal1007@gmail.com
+ - Discord ID:phymyst
+ - GitHub ID:htal-710
+ - Nationality:Indian
+ - Current affiliation:Missouri University of Science and Technology
 
-Team Member 3: _(full name)_
- - Email:
- - Discord ID:
- - GitHub ID:
- - Nationality:
- - Current affiliation:
+Team Member 3: _(Rithik Rai)_
+ - Email:iarithik@gmail.com
+ - Discord ID:iarithik
+ - GitHub ID:iarithik
+ - Nationality:Indian
+ - Current affiliation:Not Applicable
 
-Team Member 4: _(full name)_
- - Email:
- - Discord ID:
- - GitHub ID:
- - Nationality:
- - Current affiliation:
+Team Member 4: _(Fatemeh Hamedvasighi)_
+ - Email:poonehamedvasighi@gmail.com
+ - Discord ID:fatemeh077683
+ - GitHub ID:PooneHamedvasighi
+ - Nationality:Iranian
+ - Current affiliation:Amirkabir university of technology
 
 ### Project Solution:
 _Include a comprehensive summary of all important information about your project solution here._
