@@ -1,4 +1,3 @@
-#Title:
 ## Optimizing Battery Temperature for Electric Vehicles Using Quantum Annealing: Implications for Grid Load Management and Carbon Emission Reduction
 
 ### Overview
@@ -12,11 +11,10 @@ and contribute to carbon emission reduction.
 
 Optimizing battery temperature is crucial because:
 
-- **Battery Temperature:** Affects the SoH and efficiency of EV batteries, directly impacting their lifespan.
-- **State of Charge (SoC):** Keeping SoC within optimal ranges is vital for efficient battery operation and user experience.
+- **Battery Temperature:** Affects the SoH and efficiency of EV batteries, directly impacting their lifespan. Related article: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4526891/
+- **State of Charge (SoC):** Keeping SoC within optimal ranges is vital for efficient battery operation and user experience.https://www.sciencedirect.com/science/article/pii/S2352152X23025422
 - **Grid Load Management:** Optimized battery performance can enable more effective smart charging strategies, reducing peak-time grid stress.
-- **Carbon Emissions:** Efficient battery management can lead to better utilization of low-carbon energy sources along with increase in battery's increased lifespan, 
-                        aiding in the reduction of carbon emissions.
+- **Carbon Emissions:** Efficient battery management can lead to better utilization of low-carbon energy sources along with increase in battery's increased lifespan, aiding in the reduction of carbon emissions.
 
 
 ### Overview
