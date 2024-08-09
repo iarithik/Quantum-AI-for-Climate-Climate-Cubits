@@ -1,0 +1,527 @@
+Title:
+Optimising Battery Temperature for Electric Vehicles Using Quantum Annealing: Implications for Grid Load Management and Carbon Emission Reduction
+
+1. Problem Statement and Background:
+
+This research focuses on optimising battery temperature for lithium-ion batteries in electric vehicles (EVs) while maintaining an optimal State of Charge (SoC). This optimisation is critical because:
+
+- Battery Temperature: It directly affects the State of Health (SoH) and performance of EV batteries, influencing their longevity and efficiency.
+- State of Charge (SoC): Maintaining an optimal SoC ensures efficient operation and extends the battery's lifespan.
+- Grid Load Management: By optimising battery performance, more efficient smart charging strategies can be implemented, easing grid load and reducing peak-time stress.
+- Carbon Emissions: Enhanced battery management can lead to more efficient use of low-carbon energy sources, reducing carbon emissions.
+
+ 2. Background Research and Literature Review:
+
+From the literature review, the following areas were explored:
+
+- Quantum Optimization in Climate Science:
+    - Explored quantum computing's potential in addressing climate challenges, focusing on papers like "Quantum Optimization" by Stuart Hadfield and Michał Stęchły.
+
+- Smart Charging Strategies for EVs:   
+    - Investigated how smart charging influences grid load management and carbon emissions. Essential reference: "Smart charging strategy for electric vehicles based on marginal carbon emission factors and time-of-use price" (ScienceDirect).
+
+- Battery State Estimation Methods:
+    - Compared classical, AI, and quantum approaches to SoH and SoC estimation, using references such as "A comprehensive study on state-of-charge and state-of-health estimation of sodium-ion batteries" (ScienceDirect) and "Lithium-ion battery state of health estimation method based on variational quantum algorithm optimized stacking strategy" (ScienceDirect).
+
+- QUBO and Quantum Annealing:
+    - Focused on Quadratic Unconstrained Binary Optimization (QUBO) and its application to optimisation problems, emphasising resources provided by D-Wave for quantum annealing.
+
+ 3. Methodology:
+
+Your research methodology is structured and aligns with the problem statement:
+
+- Data Preparation:
+    - Converted the NASA battery dataset from MATLAB to CSV format.
+    - Processed the data to calculate SoC values.
+
+- Objective Function Formulation:
+    - Statistical methods were employed to derive the objective function for the QUBO problem, which was aimed at minimising temperature while keeping SoC optimal.
+
+- QUBO Formulation:
+    - Developed the Q matrix for the quantum annealing process, framing the problem as a QUBO.
+
+- Quantum Annealing:
+    - Currently working on mapping the objective function to embeddings suitable for D-Wave's quantum annealer.
+    - Plan to use D-Wave's quantum annealer to solve the optimisation problem.
+
+ 4. Computational Resources:
+
+- Data Processing and ML Training: Performed on standard CPUs/GPUs.
+- Quantum Annealing: Utilized D-Wave's quantum annealer.
+
+ 5. Results and Potential Impact:
+
+The project is still in the implementation phase, but the potential impact is significant:
+
+1. Extended Battery Life and Improved EV Performance:
+    - Optimizing temperature management could lead to better battery longevity and performance.
+
+2. Enhanced Smart Charging Strategies:
+    - More accurate SoC estimation could lead to optimised charging that reduces grid load during peak hours.
+
+3. Reduced Carbon Emissions:
+    - By optimising the use of low-carbon energy sources during charging, overall carbon emissions could be lowered.
+
+ Conclusion:
+
+This project highlights the potential of combining AI and quantum computing to solve complex optimization problems in battery management systems. Improving battery temperature management and SoC estimation addresses crucial challenges in EV performance, grid management, and carbon emission reduction, thus contributing to a more sustainable future.
+ Summary:
+
+The project focuses on improving battery management systems (BMS) by optimizing the State of Health (SoH) and State of Charge (SoC) of lithium-ion batteries. The primary goal is to enhance battery life and efficiency, which can aid in managing electrical grid loads and reducing carbon emissions, particularly in smart charging for electric vehicles.
+
+Key Decisions and Steps:
+1. Battery Choice: Decided using lithium-ion (Li-On) batteries over sodium-ion (Na-On) batteries after considering various factors.
+2. Methodologies Explored:
+   - Classical Method: Implementing the Extended Kalman Filter for SoH and SoC estimation.
+   - AI Techniques: Considering models like State Vector Regression, Convolutional Neural Networks (CNN), and Long Short-Term Memory (LSTM).
+   - Quantum Computing Approaches: Exploring Quantum Approximate Optimization Algorithm (QAOA) and quantum circuit-based solutions.
+3. Quantum Focus: The project aims to use QUBO (Quadratic Unconstrained Binary Optimization) and Quantum Annealing to find the optimal temperature that maximizes battery SoH, maintains SoC, and extends the Remaining Useful Life (RUL).
+4. Data Preparation: Converted complex MATLAB datasets to CSV for analysis. Used machine learning to determine coefficients for QUBO, formulated the objective function and debated necessary constraints and penalties.
+5. Testing: Configured the D-Wave setup and ran sample quantum annealing problems to understand the mapping and embedding process.
+6. Next Steps: Compare the performance of classical, AI, and quantum methods in optimizing SoH and SoC.
+
+ 1. Battery Selection and Background:
+   - Battery Type: Decided using Li-Ion batteries over Sodium-Ion, based on comprehensive studies and analyses.
+   - Key References:
+     - [White Paper: Simulink BMS Development](https://www.mathworks.com/company/newsletters/articles/model-based-design-for-battery-management-systems.html)
+     - [Paper on Kalman Filter for SoC Estimation](https://www.mdpi.com/1996-1073/13/9/2188/htm)
+     - [Battery Selection Paper (arXiv)](https://arxiv.org/pdf/2107.05362)
+
+ 2. Quantum Optimization:
+   - Quantum Algorithms: Explored QAOA for optimizing smart charging of batteries, with references to its effectiveness in similar industrial applications.
+   - Key Quotation: From the Hadfield and Stechly paper on the potential and challenges of quantum optimization for climate-related applications.
+   - References:
+     - [Quantum Optimization Paper](https://arxiv.org/pdf/2107.05362)
+
+ 3. SoC and SoH Estimation:
+   - Techniques: Used a mix of Extended Kalman Filters, AI models like LSTM and SVR, and quantum optimization methods.
+   - Key References:
+     - [A Comprehensive Study on SoC/SoH for Sodium-Ion Batteries](https://www.sciencedirect.com/science/article/pii/S2666827021000225)
+     - [State-of-Charge Estimation of Sodium-Ion Batteries](https://www.sciencedirect.com/science/article/pii/S2405896321000571)
+     - [Review on SoH and Aging of Batteries](https://www.sciencedirect.com/science/article/pii/S0378775319306316)
+     - [Data-Driven SoH Estimation](https://www.sciencedirect.com/science/article/pii/S0378775320313621)
+
+ 4. NASA Dataset:
+   - Source: Used the NASA Battery Aging Dataset for empirical analysis.
+   - Data Manipulation: Implemented code to extract and manipulate data from `.mat` files.
+   - References:
+     - [NASA Battery Data Set](https://phm-datasets.s3.amazonaws.com/NASA/5.+Battery+Data+Set.zip)
+
+ 5. QUBO Formulation:
+   - Objective: Minimize temperature while maintaining SoC within a specified range (0.2 - 0.8).
+   - Constraints and Penalties: Defined for quantum annealing, incorporating temperature and SoC as key parameters.
+   - References:
+     - [QUBO and Quantum Annealing References](https://www.nature.com/articles/s41598-020-73728-4)
+     - [Quantum Annealing Problems with Constraints and Penalties](https://www.nature.com/articles/s41598-020-73728-4)
+
+ 6. Code and Implementation:
+   - Data Handling: Code for extracting and converting NASA dataset for further analysis.
+   - QUBO Solver: Implemented a QUBO solver to test quantum annealing problems.
+   - References:
+     - [Matlab to CSV Conversion](https://github.com/bnarms/NASA-Battery-Dataset/blob/main/NASA_Battery_Data_Extraction.ipynb)
+     - [QUBO Solver and Formulation](https://colab.research.google.com/drive/1Vbz2V3BdLRrds9KExkF65mnB1em7GJ-4)
+
+ 7. AI Integration:
+   - AI Models: Implemented LSTM and SVR for predicting SoH, optimizing the quantum algorithms.
+   - References:
+     - [AI and Quantum Algorithm for SoH Estimation](https://www.sciencedirect.com/science/article/pii/S2405896321000571)
+
+ Areas Needing Further Insights:
+1. QUBO Formulation: Refining the formulation to ensure it accurately represents the problem and considers all necessary variables, constraints, and penalties.
+2. Quantum Annealing Configuration: Fine-tuning the annealing process, including the embedding and mapping of the problem onto quantum hardware.
+3. Methodological Comparisons: Drawing detailed comparisons between classical, AI, and quantum approaches to determine the most effective method for SoH and SoC optimization.
+
+
+
+
+1. Battery management system reference: [simulink-bms-development-white-paper.pdf (mathworks.com)](https://www.mathworks.com/content/dam/mathworks/white-paper/simulink-bms-development-white-paper.pdf) and [Energies | Free Full-Text | Implementing an Extended Kalman Filter for SoC Estimation of a Li-Ion Battery with Hysteresis: A Step-by-Step Guide (mdpi.com)](https://www.mdpi.com/1996-1073/14/13/3733)
+    
+2. Used this paper to decide on battery : [https://arxiv.org/pdf/2107.05362](https://arxiv.org/pdf/2107.05362)
+    
+
+1. Quoted: II. QUANTUM OPTIMIZATION STUART HADFIELD AND MICHAŁ STĘCHŁY While optimization offers a broad area of potential applications of quantum computing related to climate, at this early stage it remains unclear i) to what degree quantum computers can provide advantages in optimization over classical algorithms in impactful applications of interest, and ii) at what timeframe we can expect to realize such advantages in terms of both hardware and algorithm development. Indeed, quantum approaches to optimization remain an active area of research, both in terms of general algorithms and specific applications, for near-term devices and beyond. Moreover, optimization exhibits the potential for different modes of possible quantum advantage, in particular in either settings of exact or approximate optimization (including heuristics), which have different suitability in different applications, as well as sampling problems. While we outline here several potentially impactful areas directly related to the intersection of optimization and climate change, further research is needed to elucidate specific challenging computational tasks in detail, and their implementation on and potential benefit from quantum devices. For example, a recent paper [47] considers quantum approaches to problems related to smart-charging of electric vehicles, and observes performance competitive with classical methods. Further work remains to develop the links between such possible computational advantages and the resulting real-world impacts. Hence, Q4Climate encourages further interaction between the climate and quantum communities towards leveraging quantum technologies related to optimization. Much research remains to be done, and we are still at the early stages of understanding the power of quantum approaches to optimization, generally.
+    
+
+4. QAOA for smart charging of batteries: 
+    
+
+1. Quoted: 
+    
+
+We present a case study of such a protocol for two industrial problems drawn from the strongly developing field of smart-charging of electric vehicles. Tailored implementations of the Quantum Approximate Optimization Algorithm (QAOA) have been developed for both problems, and tested numerically with classical resources either by emulation of Pasqal’s Rydberg atom based quantum device or using Atos Quantum Learning Machine. In both cases, quantum algorithms exhibit the same approximation ratios than conventional approximation algorithms, or improve them
+
+4. Checked on applicability for Sodium Ion batteries:
+    
+
+1. [A comprehensive study on state-of-charge and state-of-health estimation of sodium-ion batteries - ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S2352152X23017115)
+    
+2. [State-of-charge estimation of sodium-ion batteries: A fusion deep learning approach - ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S2352152X24011125d1e5591)
+    
+
+6. Understanding SoH and aging of battery review:
+    
+
+1. review of the lithium-ion battery state of health prognosis methods combining aging mechanism analysis : [A comprehensive review of the lithium-ion battery state of health prognosis methods combining aging mechanism analysis - ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S2352152X23007442)
+    
+2. SoH estimation using AI models :[2010.10452 (arxiv.org)](https://arxiv.org/pdf/2010.10452)
+    
+3. Report on SOH and SOC are coupled to account for the influence of battery aging on the SOC estimation. The SOC estimation accuracy is improved significantly over the battery lifespan. : [Dual time-scale state-coupled co-estimation of SOC, SOH and RUL for lithium-ion batteries via Deep Inter and Intra-Cycle Attention Network (arxiv.org)](https://arxiv.org/pdf/2210.11941)
+    
+4. SoH estimation using support vector machine:[SOH estimation of lithium-ion batteries based on least squares support vector machine error compensation model | Journal of Power Electronics (springer.com)](https://link.springer.com/article/10.1007/s43236-021-00307-8)
+    
+5. Data Manipulation and Estimation of SoH using Deep Learning :[Open access dataset, code library and benchmarking deep learning approaches for state-of-health estimation of lithium-ion batteries - ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S2352152X23032826)
+    
+6. Understanding of graph models for SoH estimation : [Batteries | Free Full-Text | Battery State of Health Estimate Strategies: From Data Analysis to End-Cloud Collaborative Framework (mdpi.com)](https://www.mdpi.com/2313-0105/9/7/351B28-batteries-09-00351)
+    
+
+1. In this context, we believe that knowledge graph technology has wide-ranging applications. To effectively leverage heterogeneous and dynamically changing data and explore key information influencing battery aging, the cloud-based data management approach of knowledge graphs can be employed. By harnessing such complex systems, AI models driven by both knowledge and data can be developed to comprehensively analyze various aspects of battery aging, thereby supporting battery management and facilitating the estimation of SOH.
+2. 
+
+
+Project Battery dataset Source: [[Research Paper Utilizing NASA dataset]]
+
+Data Structure (Files: B0005.mat	Data for Battery 5):
+
+Files inside B0005.mat ![[Pasted image 20240720155353.png]]
+Cycle has 616 rows containing data for charging and discharging cycle: ![[Pasted image 20240720155525.png]]
+		
+Data during charging cycle :
+for charge the fields are: Voltage measured: 	        Battery terminal voltage (Volts) Current measured:	        Battery output current (Amps) Temperature measured: 	Battery temperature (degree C) Current charge:		        Current measured at charger (Amps) Voltage charge:		        Voltage measured at charger (Volts) Time:			                    Time vector for the cycle (secs) ![[Pasted image 20240720155611.png]]
+
+Data during discharging cycle : for discharge the fields are: Voltage measured: 	       Battery terminal voltage (Volts) Current measured:	       Battery output current (Amps) Temperature measured: Battery temperature (degree C) Current charge:		       Current measured at load (Amps) Voltage charge:		       Voltage measured at load (Volts) Time:			                   Time vector for the cycle (secs) Capacity:		                    Battery capacity (Ahr) for discharge till 2.7V ![[Pasted image 20240720160126.png]]
+
+
+5. Plotting the graph :
+
+Code: plot(B0005.cycle(1).data.Voltage_charge,B0005.cycle(1).data.Time,XDataSource = 'B0005.cycle(1).data.Voltage_charge',YDataSource = 'B0005.cycle(1).data.Time');
+
+linkdata on;
+
+xlabel("B0005.cycle(1).data.Voltage_charge");
+
+ylabel("B0005.cycle(1).data.Time");
+title("B0005.cycle(1).data.Time vs B0005.cycle(1).data.Voltage_charge");
+
+legend("show");
+
+References
+Research Paper Utilizing NASA dataset : ([Li-ion Battery Aging Datasets])
+Experiments on Li-Ion batteries. Charging and discharging at different temperatures. Records the impedance as the damage criterion. The data set was provided by the NASA Prognostics Center of Excellence (PCoE). Download Mirror: https://phm-datasets.s3.amazonaws.com/NASA/5.+Battery+Data+Set.zip Data Set Citation: B. Saha and K. Goebel (2007). “Battery Data Set”, NASA Prognostics Data Repository, NASA Ames Research Center, Moffett Field, CA
+
+2. Qubo formulation : 
+1. Understand the dataset
+2. Parameters: SoH,Temperature, Voltage, Current, SoC
+3. Minimize : Temperature
+5. Penalty: SoC range: 0.2 - 0.8 
+3. SoH calculation: What are SOC and SOH of a battery, how to measure them? (biologic.net)
+4. SoC calculation: SOH = Ct C0 (1) Among them, Ct is the current remaining capacity of the battery, and C0 is the rated capacity. Therefore, in the process of estimating the SOH of LIB, the following main issues need to be discussed and analyzed: 1. Obtaining an accurate and large number of LIB charge and discharge datasets; 2. Performing mathematical analysis to extract features that have a higher degree of correlation with SOH, and extracting a large amount of data related to features; 3. Data processing of battery characteristics to reduce fluctuations and noise; 4. Choosing a suitable machine learning model which takes into account accuracy and efficiency. References: Energies | Free Full-Text | A Review of SOH Prediction of Li-Ion Batteries Based on Data-Driven Algorithms (mdpi.com)
+5. SoH estimation using LSTM : Prediction of Li-ion battery state of health based on data-driven algorithm - ScienceDirect
+6. Data processing references : State of Health Estimation of Lithium-Ion Batteries Using Support Vector Regression and Long Short-Term Memory (scirp.org)
+7. SoH estimation using  quantum algorithm optimized stacking : Lithium-ion battery state of health estimation method based on variational quantum algorithm optimized stacking strategy - ScienceDirect
+8. QUBO to Quantum Annealing reference: WOMANIUM QUANTUM + AI 2024: DAY 7 ❯ QUANTUM ANNEALING: DEMO & IMPLEMENTATION (Sara Jamous - D-Wave) (youtube.com)
+9. Problem formulation : A-Practical-Guide-to-Quantum-Machine-Learning-and-Quantum-Optimization/Chapter04/Chapter_04_code.ipynb at main · PacktPublishing/A-Practical-Guide-to-Quantum-Machine-Learning-and-Quantum-Optimization (github.com)
+10. Books to understand QUBO and Quantum Annealing: A Practical Guide to Quantum Machine Learning and Quantum Optimization | Programming | eBook (packtpub.com) and Quantum bridge analytics I: a tutorial on formulating and using QUBO models | Annals of Operations Research (springer.com) 
+11. Quantum Annealing problem with constraints and penalties reference: Solving the resource constrained project scheduling problem with quantum annealing | Scientific Reports (nature.com)
+
+
+Code references: 
+Matlab dataset to csv : reference: NASA-Battery-Dataset/NASA_Battery_Data_Extraction.ipynb at main · bnarms/NASA-Battery-Dataset (github.com) and
+Discharge_cycle.ipynb - Colab (google.com)
+SoC calculation for limited dataset: SoC_Calculation.ipynb - Colab (google.com)
+Qubo solver : Untitled1.ipynb - Colab (google.com)
+Qubo formulation : 
+Temperature Equation:
+
+Linear Terms:
+	
+Quadratic Terms:
+
+Offset:
+Offset=−16.3967
+Variables:
+X0=V      ,X1=I,     X2=t    ,  X_0 = V
+
+AI based coherent thing although its not that coherent:
+---
+
+ Title:
+Optimizing Battery Temperature for Electric Vehicles Using Quantum Annealing: Implications for Grid Load Management and Carbon Emission Reduction
+
+ 1. Problem Statement and Background:
+The focus of this research is on optimizing battery temperature for lithium-ion batteries in electric vehicles (EVs) while maintaining optimal State of Charge (SoC). This optimization is critical because:
+
+- Battery Temperature: It directly affects the State of Health (SoH) and performance of EV batteries, influencing their longevity and efficiency.
+- State of Charge (SoC): Maintaining an optimal SoC ensures efficient operation and extends the lifespan of the battery.
+- Grid Load Management: By optimizing battery performance, more efficient smart charging strategies can be implemented, easing grid load and reducing peak-time stress.
+- Carbon Emissions: Enhanced battery management can lead to more efficient use of low-carbon energy sources, contributing to carbon emission reduction.
+
+ 2. Background Research and Literature Review:
+Your literature review covers several pivotal areas:
+
+- Quantum Optimization in Climate Science:
+  - Explored quantum computing's potential in addressing climate challenges, with a focus on papers like "Quantum Optimization" by Stuart Hadfield and Michał Stęchły.
+
+- Smart Charging Strategies for EVs:
+  - Investigated how smart charging influences grid load management and carbon emissions. Key reference: "Smart charging strategy for electric vehicles based on marginal carbon emission factors and time-of-use price" (ScienceDirect).
+
+- Battery State Estimation Methods:
+  - Compared classical, AI, and quantum approaches to SoH and SoC estimation, using references such as "A comprehensive study on state-of-charge and state-of-health estimation of sodium-ion batteries" (ScienceDirect) and "Lithium-ion battery state of health estimation method based on variational quantum algorithm optimized stacking strategy" (ScienceDirect).
+
+- QUBO and Quantum Annealing:
+  - Focused on Quadratic Unconstrained Binary Optimization (QUBO) and its application to optimization problems, with an emphasis on resources provided by D-Wave for quantum annealing.
+
+ 3. Methodology:
+Your research methodology is clearly structured and aligns with the problem statement:
+
+- Data Preparation:
+  - Converted the NASA battery dataset from MATLAB to CSV format.
+  - Processed the data to calculate SoC values.
+
+- Objective Function Formulation:
+  - Employed machine learning to derive the objective function for the QUBO problem, aimed at minimizing temperature while keeping SoC optimal.
+
+- QUBO Formulation:
+  - Developed the Q matrix for the quantum annealing process, framing the problem as a QUBO.
+
+- Quantum Annealing:
+  - Currently working on mapping the objective function to embeddings suitable for D-Wave's quantum annealer.
+  - Plan to use D-Wave's quantum annealer to solve the optimization problem.
+
+ 4. Computational Resources:
+- Data Processing and ML Training: Performed on standard CPUs/GPUs.
+- Quantum Annealing: Utilized D-Wave's quantum annealer.
+
+ 5. Results and Potential Impact:
+The project is still in the implementation phase, but the potential impact is significant:
+
+1. Extended Battery Life and Improved EV Performance:
+   - Optimizing temperature management could lead to better battery longevity and performance.
+  
+2. Enhanced Smart Charging Strategies:
+   - More accurate SoC estimation could lead to optimized charging that reduces grid load during peak hours.
+
+3. Reduced Carbon Emissions:
+   - By optimizing the use of low-carbon energy sources during charging, overall carbon emissions could be lowered.
+
+ Conclusion:
+This project highlights the potential of combining AI and quantum computing to solve complex optimization problems in battery management systems. By improving battery temperature management and SoC estimation, it addresses crucial challenges in EV performance, grid management, and carbon emission reduction, thus contributing to a more sustainable future.
+
+
+Problem Statement Discussion:
+
+  
+
+1. Topic was how accurate SoH and SoC of battery can help manage load on electrical grid [Smart charging strategy for electric vehicles based on marginal carbon emission factors and time-of-use price - ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S2210670723003190)  and how it will help reduce load on carbon emissions.
+    
+2. Deciding on battery management system which aspect to choose
+    
+3. Decided on SoH and SoC estimation of batteries
+    
+4. Debated on use of LiOn and NaOn battery, decided the former
+    
+5. Looked into classical method to solve this problem : extended kalman filter
+    
+6. AI ways to do it includes: State vector regression, CNN and LSTM
+    
+7. Quantum ways to do it includes : QAOA and use of mapping the variables to quantum circuit and solving it using classical methods
+    
+8. To test the limits on quantum computing methods decided to test QUBO and Quantum Annealing method to reach optimal temperature level in such a way that both SoC will be at functional level and extending RUL of battery. And Increasing SoH of battery. 
+    
+9. Temperature affects various affects of battery.
+    
+10. Preparation of dataset which is in matlab file in complicated manner, converting it to CSV file
+    
+11. Found coefficients for QUBO using ML
+    
+12. And then found the objective function and Q required to map the problem to BQM and CQM which will then be used for embedding and solving the annealing problem
+    
+13. Debating on constraints and penalties required for this equation as it is a different problem than most problem used for Quantum annealing which involve binary encoding.
+    
+14. Configured the dwave setup using CLI and Vscode and tested sample quantum annealing problems to understand mapping. 
+    
+15. Original idea constituted of comparing estimation methods for SoH , classical method: kalman filter, AI models: CNN , LSTM , SVM , Quantum Computing Model: quantum algorithm optimized stacking 
+    
+16. Currently we are analyzing using QUBO and Quantum annealing to find sweet spot for temperature range so we can maximize battery’s Soh and compare with the previous methods.
+    
+
+  
+  
+
+1. Battery management system reference: [simulink-bms-development-white-paper.pdf (mathworks.com)](https://www.mathworks.com/content/dam/mathworks/white-paper/simulink-bms-development-white-paper.pdf) and [Energies | Free Full-Text | Implementing an Extended Kalman Filter for SoC Estimation of a Li-Ion Battery with Hysteresis: A Step-by-Step Guide (mdpi.com)](https://www.mdpi.com/1996-1073/14/13/3733)
+    
+2. Used this paper to decide on battery : [https://arxiv.org/pdf/2107.05362](https://arxiv.org/pdf/2107.05362)
+    
+
+1. Quoted: II. QUANTUM OPTIMIZATION STUART HADFIELD AND MICHAŁ STĘCHŁY While optimization offers a broad area of potential applications of quantum computing related to climate, at this early stage it remains unclear i) to what degree quantum computers can provide advantages in optimization over classical algorithms in impactful applications of interest, and ii) at what timeframe we can expect to realize such advantages in terms of both hardware and algorithm development. Indeed, quantum approaches to optimization remain an active area of research, both in terms of general algorithms and specific applications, for near-term devices and beyond. Moreover, optimization exhibits the potential for different modes of possible quantum advantage, in particular in either settings of exact or approximate optimization (including heuristics), which have different suitability in different applications, as well as sampling problems. While we outline here several potentially impactful areas directly related to the intersection of optimization and climate change, further research is needed to elucidate specific challenging computational tasks in detail, and their implementation on and potential benefit from quantum devices. For example, a recent paper [47] considers quantum approaches to problems related to smart-charging of electric vehicles, and observes performance competitive with classical methods. Further work remains to develop the links between such possible computational advantages and the resulting real-world impacts. Hence, Q4Climate encourages further interaction between the climate and quantum communities towards leveraging quantum technologies related to optimization. Much research remains to be done, and we are still at the early stages of understanding the power of quantum approaches to optimization, generally.
+    
+
+4. QAOA for smart charging of batteries: 
+    
+
+1. Quoted: 
+    
+
+We present a case study of such a protocol for two industrial problems drawn from the strongly developing field of smart-charging of electric vehicles. Tailored implementations of the Quantum Approximate Optimization Algorithm (QAOA) have been developed for both problems, and tested numerically with classical resources either by emulation of Pasqal’s Rydberg atom based quantum device or using Atos Quantum Learning Machine. In both cases, quantum algorithms exhibit the same approximation ratios than conventional approximation algorithms, or improve them
+
+4. Checked on applicability for Sodium Ion batteries:
+    
+
+1. [A comprehensive study on state-of-charge and state-of-health estimation of sodium-ion batteries - ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S2352152X23017115)
+    
+2. [State-of-charge estimation of sodium-ion batteries: A fusion deep learning approach - ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S2352152X24011125d1e5591)
+    
+
+6. Understanding SoH and aging of battery review:
+    
+
+1. review of the lithium-ion battery state of health prognosis methods combining aging mechanism analysis : [A comprehensive review of the lithium-ion battery state of health prognosis methods combining aging mechanism analysis - ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S2352152X23007442)
+    
+2. SoH estimation using AI models :[2010.10452 (arxiv.org)](https://arxiv.org/pdf/2010.10452)
+    
+3. Report on SOH and SOC are coupled to account for the influence of battery aging on the SOC estimation. The SOC estimation accuracy is improved significantly over the battery lifespan. : [Dual time-scale state-coupled co-estimation of SOC, SOH and RUL for lithium-ion batteries via Deep Inter and Intra-Cycle Attention Network (arxiv.org)](https://arxiv.org/pdf/2210.11941)
+    
+4. SoH estimation using support vector machine:[SOH estimation of lithium-ion batteries based on least squares support vector machine error compensation model | Journal of Power Electronics (springer.com)](https://link.springer.com/article/10.1007/s43236-021-00307-8)
+    
+5. Data Manipulation and Estimation of SoH using Deep Learning :[Open access dataset, code library and benchmarking deep learning approaches for state-of-health estimation of lithium-ion batteries - ScienceDirect](https://www.sciencedirect.com/science/article/abs/pii/S2352152X23032826)
+    
+6. Understanding of graph models for SoH estimation : [Batteries | Free Full-Text | Battery State of Health Estimate Strategies: From Data Analysis to End-Cloud Collaborative Framework (mdpi.com)](https://www.mdpi.com/2313-0105/9/7/351B28-batteries-09-00351)
+    
+
+1. In this context, we believe that knowledge graph technology has wide-ranging applications. To effectively leverage heterogeneous and dynamically changing data and explore key information influencing battery aging, the cloud-based data management approach of knowledge graphs can be employed. By harnessing such complex systems, AI models driven by both knowledge and data can be developed to comprehensively analyze various aspects of battery aging, thereby supporting battery management and facilitating the estimation of SOH.
+2. 
+
+Project Battery dataset Source: [[Research Paper Utilizing NASA dataset]]
+
+  
+
+1. Data Structure (Files: B0005.mat Data for Battery 5):
+    
+
+  
+
+1. Files inside B0005.mat ![[Pasted image 20240720155353.png]]![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXffPPg1IQdvVDuE2MdC8NUY6dZQyTgHbT7lwZu_IwoFEWC5W9KzW3OBcZ7IvCBn-Amcwx4Yh7Uru6wxkLtTBJvvQBiaYC7PBskDYvpsJrIUQj7ojActJsFm_X9-TVL4EdRB828nqbMxOEm6i6YUCKIOBmE6?key=v6CcXyTZoSZiMb0ad1wmQg)
+    
+2. Cycle has 616 rows containing data for charging and discharging cycle: ![[Pasted image 20240720155525.png]]
+    
+
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXeWlKwnp12G5iftEksJMTRaHD1_MrRgnewi7qX_BKIg3PRMGsXSMHs-0fg_EB2wK4DhdM48Onf-fyiQIDKEY0Kg7yOCa-9Jigv9Rq4jfxksHQqwGZXUr64mnOsASpcvaZ2zB3OZM4reJ633TM50rj_IOck?key=v6CcXyTZoSZiMb0ad1wmQg)
+
+3. Data during charging cycle :  
+    for charge the fields are: Voltage measured:         Battery terminal voltage (Volts) Current measured:         Battery output current (Amps) Temperature measured: Battery temperature (degree C) Current charge:         Current measured at charger (Amps) Voltage charge:         Voltage measured at charger (Volts) Time:                     Time vector for the cycle (secs) ![[Pasted image 20240720155611.png]]
+    
+
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXf8bg4yUrEBtprikE4FC-5gpnKCg9hjfif1EvoKKMLzxWoII7T0cjRyBNmfUwDp_s4JQbq1Zg7-_AF8Ts-Q6BPV5Xlfk99uqnN5d9wgKP49D7Di1q2uzr2hO8WSH-7nnHj-qL1KReGloK-EKY17DEhHOvuc?key=v6CcXyTZoSZiMb0ad1wmQg)
+
+4. Data during discharging cycle : for discharge the fields are: Voltage measured:       Battery terminal voltage (Volts) Current measured:       Battery output current (Amps) Temperature measured: Battery temperature (degree C) Current charge:       Current measured at load (Amps) Voltage charge:       Voltage measured at load (Volts) Time:                   Time vector for the cycle (secs) Capacity:                     Battery capacity (Ahr) for discharge till 2.7V ![[Pasted image 20240720160126.png]]
+    
+
+  
+
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdlMnBX4yWLz2HtztD-bU7xleifQfRdik9v-sEUiS_ARMthJV5lHEhsluJ6BNsfw1e6zTgdSXokMnZwxqPlMDu5tGSKWKvnuv7U3aF0wcEadNDzA9tFq739Vb-Z-dnNuOnlIOE303dR1ik82LPLkMtD_gq8?key=v6CcXyTZoSZiMb0ad1wmQg)
+
+5. Plotting the graph :
+
+  
+
+1. Code: plot(B0005.cycle(1).data.Voltage_charge,B0005.cycle(1).data.Time,XDataSource = 'B0005.cycle(1).data.Voltage_charge',YDataSource = 'B0005.cycle(1).data.Time');
+    
+
+  
+
+linkdata on;
+
+  
+
+xlabel("B0005.cycle(1).data.Voltage_charge");
+
+  
+
+ylabel("B0005.cycle(1).data.Time");
+
+title("B0005.cycle(1).data.Time vs B0005.cycle(1).data.Voltage_charge");
+
+  
+
+legend("show");
+
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdTGTO_3fKx3iJwnTdSmJ93Gg1Upc9C9DqP1qjICghEGOXQ1X_PG6qq9eBeGLEEQNv0xnej7CMNncic3DCZaJFl_oXzULt_Yw0hCP19f4kV4XgvVAlY7IgmKIOMtQfMnKnGU062v64XUwT8tTUs7NpT4DMP?key=v6CcXyTZoSZiMb0ad1wmQg)
+
+ References
+
+- Research Paper Utilizing NASA dataset : ([[Li-ion Battery Aging Datasets]](https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/:~:text=Moffett%20Field%2C%20CA-,5.%20Batteries,-Experiments%20on%20Li))
+    
+- Experiments on Li-Ion batteries. Charging and discharging at different temperatures. Records the impedance as the damage criterion. The data set was provided by the NASA Prognostics Center of Excellence (PCoE). 
+Download Mirror: [https://phm-datasets.s3.amazonaws.com/NASA/5.+Battery+Data+Set.zip](https://phm-datasets.s3.amazonaws.com/NASA/5.+Battery+Data+Set.zip) 
+Data Set Citation: B. Saha and K. Goebel (2007). “Battery Data Set”, NASA Prognostics Data Repository, NASA Ames Research Center, Moffett Field, CA
+    
+
+  
+
+2. Qubo formulation : 
+
+1. Understand the dataset
+
+2. Parameters: SoH,Temperature, Voltage, Current, SoC
+
+3. Minimize : Temperature
+
+5. Penalty: SoC range: 0.2 - 0.8 
+
+3. SoH calculation: [What are SOC and SOH of a battery, how to measure them? (biologic.net)](https://www.biologic.net/topics/battery-states-state-of-charge-soc-state-of-health-soh/)
+
+4. SoC calculation: SOH = Ct C0 (1) Among them, Ct is the current remaining capacity of the battery, and C0 is the rated capacity. Therefore, in the process of estimating the SOH of LIB, the following main issues need to be discussed and analyzed: 1. Obtaining an accurate and large number of LIB charge and discharge datasets; 2. Performing mathematical analysis to extract features that have a higher degree of correlation with SOH, and extracting a large amount of data related to features; 3. Data processing of battery characteristics to reduce fluctuations and noise; 4. Choosing a suitable machine learning model which takes into account accuracy and efficiency. References: [Energies | Free Full-Text | A Review of SOH Prediction of Li-Ion Batteries Based on Data-Driven Algorithms (mdpi.com)](https://www.mdpi.com/1996-1073/16/7/3167)
+
+5. SoH estimation using LSTM : [Prediction of Li-ion battery state of health based on data-driven algorithm - ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2352484722025215)
+
+6. Data processing references : [State of Health Estimation of Lithium-Ion Batteries Using Support Vector Regression and Long Short-Term Memory (scirp.org)](https://www.scirp.org/journal/paperinformation?paperid=119262)
+
+7. SoH estimation using  quantum algorithm optimized stacking : [Lithium-ion battery state of health estimation method based on variational quantum algorithm optimized stacking strategy - ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2352484724001148da0005)
+
+8. QUBO to Quantum Annealing reference: [WOMANIUM QUANTUM + AI 2024: DAY 7 ❯ QUANTUM ANNEALING: DEMO & IMPLEMENTATION (Sara Jamous - D-Wave) (youtube.com)](https://www.youtube.com/watch?v=Hw6CKoB3B6I)
+
+9. Problem formulation : [A-Practical-Guide-to-Quantum-Machine-Learning-and-Quantum-Optimization/Chapter04/Chapter_04_code.ipynb at main · PacktPublishing/A-Practical-Guide-to-Quantum-Machine-Learning-and-Quantum-Optimization (github.com)](https://github.com/PacktPublishing/A-Practical-Guide-to-Quantum-Machine-Learning-and-Quantum-Optimization/blob/main/Chapter04/Chapter_04_code.ipynb)
+
+10. Books to understand QUBO and Quantum Annealing: [A Practical Guide to Quantum Machine Learning and Quantum Optimization | Programming | eBook (packtpub.com)](https://www.packtpub.com/en-us/product/a-practical-guide-to-quantum-machine-learning-and-quantum-optimization-9781804613832) and [Quantum bridge analytics I: a tutorial on formulating and using QUBO models | Annals of Operations Research (springer.com)](https://link.springer.com/article/10.1007/s10479-022-04634-2) 
+
+11. Quantum Annealing problem with constraints and penalties reference: [Solving the resource constrained project scheduling problem with quantum annealing | Scientific Reports (nature.com)](https://www.nature.com/articles/s41598-024-67168-6)
+
+  
+  
+
+Code references: 
+
+1. Matlab dataset to csv: reference: 
+
+[NASA-Battery-Dataset/NASA_Battery_Data_Extraction.ipynb at main · bnarms/NASA-Battery-Dataset (github.com)](https://github.com/bnarms/NASA-Battery-Dataset/blob/main/NASA_Battery_Data_Extraction.ipynb) and
+    
+
+[Discharge_cycle.ipynb - Colab (google.com)](https://colab.research.google.com/drive/1nA44DEogmz0XJzGJYtXJ--xQMZkn85az?authuser=1scrollTo=HXC7-1FhY1_k)
+
+2. SoC calculation for limited dataset: [SoC_Calculation.ipynb - Colab (google.com)](https://colab.research.google.com/drive/1_wZIFrXeiw-we_6-swWzPoCWa2Gs66py?authuser=1)
+    
+3. Qubo solver : [Untitled1.ipynb - Colab (google.com)](https://colab.research.google.com/drive/1lJHbkK6UaApGd-my-zWetgZ2sO2M3C80?authuser=1)
+    
+4. Qubo formulation : 
+    
+
+ Temperature Equation:
+
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXexIP8WcCSiH-nPW6hzbQ28Opt9Yjuib-lVPRIqi_fMWmTeBeZhDBGiVXjqoF8IzPQPJ0Fbo2koQYNqz-75JHgWeD1djCpLvOrprq6qTuKaaCffYjpJiY5lShQNAR0GAGt4mSitltHzdPr_kFAmDvvhrQqf?key=v6CcXyTZoSZiMb0ad1wmQg)
+
+ Linear Terms:
+
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXe2CI8vqhk6v5j5TDZuWoNIyIhAVQzxyAhlURVYCLE9VHxaCxt_B-w3OCOkWZjVDqMRVlCMEw7sO3_T6no13A5Ge_oS3uIEUzMkZ6QSXCIFv_2ReFQCuFQLndbAdSI8yIC7wGGqaztftiFpQqiyc_a1TjRt?key=v6CcXyTZoSZiMb0ad1wmQg)
+
+ Quadratic Terms:
+
+![](https://lh7-rt.googleusercontent.com/docsz/AD_4nXev5mSenZjbhisYEbCHwAX3sXJk0Veju8W8Xbx482pKAKNHx-zmSjHSbTgS6tYuioz24WyJMr6TLP2r-UDkh7-ttOWmAX1iNWjxE3NwavyxZcpR8ZluWllQRkBBaD59wpXosQRrnof-iUNvbt-GOd4zYtvP?key=v6CcXyTZoSZiMb0ad1wmQg)
+
+ Offset:
+
+Offset=−16.3967
+
+ Variables:
+
+X0=V      ,X1=I,     X2=t    ,  X_0 = V
+
+
