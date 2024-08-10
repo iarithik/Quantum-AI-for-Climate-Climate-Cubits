@@ -40,11 +40,7 @@ Team Member 3: _(Rithik Rai)_
  - Womanium Program Enrollment ID: WQ24-YenFcEgD9v28mBl
 
 Team Member 4: _(Fatemeh Hamedvasighi)_
- - Email:poonehamedvasighi@gmail.com
- - Discord ID:fatemeh077683
- - GitHub ID:PooneHamedvasighi
- - Nationality:Iranian
- - Current affiliation:Amirkabir university of technology
+ -  Womanium Program Enrollment ID: WQ24-ZCUPCAQ8gIF5gFs
 
 ### Project Solution:
 _
