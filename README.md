@@ -76,5 +76,6 @@ All necessary code files and any additional information required to judge your p
 
 ### Project Presentation Deck:
 _ [Presentation](https://github.com/ShivaniDM/Quantum-AI-for-Climate-Climate-Cubits/blob/main/Climate%20Cubits.pdf)
+
 Google Slides File: https://docs.google.com/presentation/d/1c80vCIJBxjr5aDSrhkyv8DRwZkbnbWn6CDdvM2KPQxs/edit?usp=sharing
 
