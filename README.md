@@ -37,11 +37,7 @@ Team Member 2: _(Harshit Agarwal)_
  - Womanium Program Enrollment ID: WQ24-6IHebC9fiGnPwja
 
 Team Member 3: _(Rithik Rai)_
- - Email:iarithik@gmail.com
- - Discord ID:iarithik
- - GitHub ID:iarithik
- - Nationality:Indian
- - Current affiliation:Not Applicable
+ - Womanium Program Enrollment ID: WQ24-YenFcEgD9v28mBl
 
 Team Member 4: _(Fatemeh Hamedvasighi)_
  - Email:poonehamedvasighi@gmail.com
