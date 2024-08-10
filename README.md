@@ -75,5 +75,5 @@ All necessary code files, data sets, and resources required to replicate and jud
 All necessary code files and any additional information required to judge your project solution should be included in the repository. 
 
 ### Project Presentation Deck:
-_Link a 5min. presentation recording or deck here._
+_ [Presentation](https://github.com/ShivaniDM/Quantum-AI-for-Climate-Climate-Cubits_)
 
