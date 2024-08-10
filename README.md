@@ -32,19 +32,9 @@ Ensure your repository does not contain any personal or team tokens/access infor
 ### Team Information:
 Team Member 1: _(Shivani Mayekar)_
  - Womanium Program Enrollment ID: WQ24-oZYS2Wc0GKUcHAV
- - Email:shivanidattaram20@gmail.com
- - Discord ID:meowismew
- - GitHub ID:ShivaniDM
- - Nationality:Indian
- - Current affiliation:Not Applicable
 
 Team Member 2: _(Harshit Agarwal)_
  - Womanium Program Enrollment ID: WQ24-6IHebC9fiGnPwja
- - Email:harshitagarwal1007@gmail.com
- - Discord ID:phymyst
- - GitHub ID:htal-710
- - Nationality:Indian
- - Current affiliation:Missouri University of Science and Technology
 
 Team Member 3: _(Rithik Rai)_
  - Email:iarithik@gmail.com
