@@ -74,6 +74,9 @@ While still in progress, the project has the potential to:
 All necessary code files, data sets, and resources required to replicate and judge the project are included in the repository. The project is structured to allow easy access to the methodologies and results, with comprehensive documentation provided for each step._
 All necessary code files and any additional information required to judge your project solution should be included in the repository. 
 
+Final Report: https://docs.google.com/document/d/1IWIwlB1erCGGM_lhHbhzZZjJyrc9RwuPIrnfFjzbstc/edit?usp=sharing
+
+
 ### Project Presentation Deck:
 _ [Presentation](https://github.com/ShivaniDM/Quantum-AI-for-Climate-Climate-Cubits/blob/main/Climate%20Cubits.pdf)
 
