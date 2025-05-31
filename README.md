@@ -1,26 +1,6 @@
 # Quantum-AI-for-Climate
-Womanium Quantum+AI 2024 Projects
 
-_**Do NOT delete/ edit the format of this read.me file.**_
-
-_**Include all necessary information only as per the given format.**_
-
-## Project Information:
-
-### Team Size:
-  - Maximum team size = 4
-  - While individual participation is also welcome, we highly recommend team participation :)
-
-### Eligibility:
-  - All nationalities, genders, and age groups are welcome to participate in the projects.
-  - All team participants must be enrolled in Womanium Quantum+AI 2024.
-  - Everyone is eligible to participate in this project and win Womanium grants.
-  - Only US Citizens will be selected for Womanium QSL fellowships with NNL.
-  - All successful project submissions earn the Womanium Project Certificate.
-
-### Project Description:
-  - Click [here](https://drive.google.com/file/d/1yoY_venPkNStjcDu0Na0HYhgO6CvVYdM/view?usp=sharing) to view the project description.
-  - YouTube recording of project description - [link](https://youtu.be/ka2RgUYo83c?si=MUb_dwTVfP1FV_47)
+This is a project done by me (Rithik Rai) and three of my teammates during the "Womanium Quantum+AI 2024 Projects"
 
 ## Project Submission:
 All information in this section will be considered for project submission and judging.
