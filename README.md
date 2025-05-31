@@ -3,11 +3,6 @@
 This is a project done by me (Rithik Rai) and three of my teammates during the "Womanium Quantum+AI 2024 Projects"
 
 ## Project Submission:
-All information in this section will be considered for project submission and judging.
-
-Ensure your repository is public and submitted by **August 9, 2024, 23:59pm US ET**.
-
-Ensure your repository does not contain any personal or team tokens/access information to access backends. Ensure your repository does not contain any third-party intellectual property (logos, company names, copied literature, or code). Any resources used must be open source or appropriately referenced.
 
 ### Team Information:
 Team Member 1: _(Shivani Mayekar)_
